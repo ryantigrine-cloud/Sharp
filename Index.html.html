@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>SHARP</title>
+<meta name="theme-color" content="#0C0F13">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SHARP">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="manifest" href='data:application/json,{"name":"SHARP","short_name":"SHARP","display":"standalone","background_color":"%230C0F13","theme_color":"%230C0F13","start_url":"."}'>
+<style>html,body{margin:0;background:#0C0F13}#boot{color:#8A94A0;font-family:monospace;font-size:11px;letter-spacing:.2em;text-align:center;padding-top:90px}</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"><div id="boot">SHARP — LOADING</div></div>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef } = React;
+
+/* ============================================================
+   SHARP — Personal Cognitive Performance System
+   Single-file functional MVP. Real persistence via window.storage.
+   ============================================================ */
+
+/* ---------- utils ---------- */
+const R = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+const pick = (a) => a[Math.floor(Math.random() * a.length)];
+const shuffle = (a) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[b[i], b[j]] = [b[j], b[i]]; } return b; };
+const median = (a) => { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y); const m = Math.floor(s.length / 2); return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+const mean = (a) => (a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0);
+const todayStr = () => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+const daysBetween = (a, b) => Math.round((new Date(b) - new Date(a)) / 86400000);
+const fmt = (n) => n.toLocaleString("en-GB");
+const pc = (x) => `${Math.round(x * 100)}%`;
+
+/* ---------- game registry ---------- */
+const GAMES = {
+  arith: { name: "Rapid Arithmetic", domain: "Numerical", cat: "num", instr: "Solve each calculation. Enter the exact answer with the keypad." },
+  estim: { name: "Estimation Range", domain: "Estimation", cat: "num", instr: "Do NOT calculate precisely. Pick the closest answer fast." },
+  span: { name: "Reverse Span", domain: "Working Memory", cat: "mem", instr: "Digits appear one at a time. Enter them in REVERSE order." },
+  stroop: { name: "Interference", domain: "Attention", cat: "speed", instr: "Tap the INK COLOUR of the word — not what the word says." },
+  rswitch: { name: "Rule Switch", domain: "Flexibility", cat: "speed", instr: "Does the card match the current rule? The rule will change without much warning." },
+  seq: { name: "Sequence Logic", domain: "Patterns", cat: "reason", instr: "Find the rule. Enter the next number in the sequence." },
+  syll: { name: "Statement Validity", domain: "Verbal Logic", cat: "reason", instr: "Assume the premises are true, even if absurd. Judge the conclusion by logic alone." },
+  ev: { name: "Expected Value", domain: "Decisions", cat: "num", instr: "Read each option's odds and payoffs. Answer the question asked — it isn't always 'highest EV'." },
+};
+const GAME_IDS = Object.keys(GAMES);
+
+/* ---------- memory pools ---------- */
+const WORDS = ["anchor", "copper", "falcon", "ledger", "mirror", "petrol", "ribbon", "saddle", "timber", "vulture", "walnut", "beacon", "canvas", "dagger", "ember", "fossil", "glacier", "hammer", "island", "jigsaw", "kernel", "lantern", "magnet", "needle", "orchid", "pulley", "quarry", "rocket", "sensor", "tunnel", "valve", "wrench", "cargo", "diesel", "engine", "fuse", "girder", "helmet", "ingot", "jetty", "cable", "mortar", "nozzle", "oxide", "piston", "relay", "socket", "turbine", "vault", "winch"];
+const NAMES = ["Karim", "Dana", "Yusuf", "Elena", "Marco", "Priya", "Omar", "Sofia", "Tariq", "Nadia"];
+const PLACES = ["Panel 7", "Substation B", "Feeder 3", "UPS Room", "Switchgear 2", "Rack 12", "Plant Room 4", "Riser 9"];
+const makeMemorySet = () => ({
+  words: shuffle(WORDS).slice(0, 5),
+  fact: { name: pick(NAMES), place: pick(PLACES), code: R(100, 999) },
+  date: todayStr(),
+  immediate: null,
+  delayed: null,
+});
+
+/* ---------- generators ---------- */
+function genArith(level) {
+  for (let t = 0; t < 60; t++) {
+    let q = null;
+    const roll = R(1, 10);
+    if (level <= 2) {
+      if (roll <= 5) { const a = R(15, 99), b = R(15, 99); q = { text: `${a} + ${b}`, answer: a + b }; }
+      else { const a = R(3, 12), b = R(3, 12); q = { text: `${a} × ${b}`, answer: a * b }; }
+    } else if (level <= 4) {
+      if (roll <= 4) { const a = R(13, 49), b = R(3, 9); q = { text: `${a} × ${b}`, answer: a * b }; }
+      else if (roll <= 7) { const p = pick([10, 20, 25, 50, 75]); const base = R(2, 20) * 20; q = { text: `${p}% of ${fmt(base)}`, answer: (base * p) / 100 }; }
+      else { const a = R(120, 480), b = R(45, 99); q = { text: `${a} − ${b}`, answer: a - b }; }
+    } else if (level <= 6) {
+      if (roll <= 4) { const a = R(12, 19), b = R(12, 19); q = { text: `${a} × ${b}`, answer: a * b }; }
+      else { const p = pick([5, 15, 30, 40, 60]); const base = R(3, 40) * 20; q = { text: `${p}% of ${fmt(base)}`, answer: (base * p) / 100 }; }
+    } else if (level <= 8) {
+      if (roll <= 5) { const p = pick([5, 10, 12, 15, 20, 25]); const base = R(4, 30) * 20; const up = Math.random() < 0.5; const ans = up ? base * (1 + p / 100) : base * (1 - p / 100); q = { text: `${fmt(base)} ${up ? "increased" : "reduced"} by ${p}%`, answer: ans }; }
+      else { const p = pick([10, 20, 25, 50]); const qq = pick([10, 25, 50]); const base = R(4, 20) * 40; const s1 = base * (1 + p / 100); const s2 = s1 * (1 - qq / 100); q = { text: `${fmt(base)} +${p}%, then −${qq}%`, answer: s2 }; }
+    } else {
+      if (roll <= 4) { const a = R(120, 890), b = R(3, 9); q = { text: `${a} × ${b}`, answer: a * b }; }
+      else if (roll <= 7) { const p = pick([12, 15, 20, 25, 40]); const qq = pick([10, 20, 25, 50]); const base = R(5, 25) * 40; const s2 = base * (1 + p / 100) * (1 - qq / 100); q = { text: `${fmt(base)} +${p}%, then −${qq}%`, answer: s2 }; }
+      else { const k = R(3, 9), a = R(4, 12), b = a * k; const mult = R(2, 6); q = { text: `${a} : ${b}  =  ${a * mult} : ?`, answer: b * mult }; }
+    }
+    if (q && Number.isInteger(q.answer) && q.answer > 0 && q.answer < 100000) return { prompt: { big: q.text }, answer: q.answer, numeric: true };
+  }
+  return { prompt: { big: "12 × 12" }, answer: 144, numeric: true };
+}
+
+function genEstim(level) {
+  const a = R(180, 9500), b = R(12, 96);
+  const truth = a * b;
+  const delta = Math.max(0.12, 0.45 - level * 0.033);
+  const opts = new Set();
+  const roundSig = (n) => { const m = Math.pow(10, Math.max(0, String(Math.round(n)).length - 3)); return Math.round(n / m) * m; };
+  const correct = roundSig(truth);
+  opts.add(correct);
+  let guard = 0;
+  while (opts.size < 4 && guard++ < 80) {
+    const f = 1 + (Math.random() < 0.5 ? -1 : 1) * (delta + Math.random() * delta);
+    const v = roundSig(truth * f);
+    if (v !== correct && Math.abs(v - correct) / correct > delta * 0.6) opts.add(v);
+  }
+  const options = shuffle([...opts]).map(fmt);
+  return { prompt: { big: `${fmt(a)} × ${b}`, q: "Closest answer — do not calculate exactly." }, options, answer: fmt(correct) };
+}
+
+function genSeq(level) {
+  for (let t = 0; t < 60; t++) {
+    let terms = [];
+    const kind = level <= 3 ? pick(["arith", "geo", "alt"]) : level <= 6 ? pick(["alt", "incdiff", "geo", "fib"]) : pick(["incdiff", "fib", "inter", "alt2"]);
+    if (kind === "arith") { const s = R(2, 30), d = R(3, 12); for (let i = 0; i < 6; i++) terms.push(s + d * i); }
+    if (kind === "geo") { const s = R(2, 6), r = pick([2, 3]); for (let i = 0; i < 6; i++) terms.push(s * Math.pow(r, i)); }
+    if (kind === "alt") { const s = R(2, 15), add = R(3, 9); let v = s; terms = [v]; for (let i = 1; i < 6; i++) { v = i % 2 ? v + add : v * 2; terms.push(v); } }
+    if (kind === "alt2") { const s = R(3, 12), sub = R(1, 3); let v = s; terms = [v]; for (let i = 1; i < 6; i++) { v = i % 2 ? v * 2 : v - sub * i; terms.push(v); } }
+    if (kind === "incdiff") { const s = R(1, 12), d0 = R(2, 6), e = R(1, 4); let v = s; terms = [v]; for (let i = 1; i < 6; i++) { v = v + d0 + e * (i - 1); terms.push(v); } }
+    if (kind === "fib") { let a = R(1, 5), b = R(2, 7); terms = [a, b]; for (let i = 2; i < 6; i++) { terms.push(terms[i - 1] + terms[i - 2]); } }
+    if (kind === "inter") { const s1 = R(2, 10), d1 = R(3, 8), s2 = R(20, 40), d2 = -R(2, 5); for (let i = 0; i < 3; i++) { terms.push(s1 + d1 * i); terms.push(s2 + d2 * i); } }
+    const ans = terms[5];
+    if (terms.every((x) => Number.isInteger(x) && x > 0 && x < 20000) && ans > 0) {
+      return { prompt: { big: terms.slice(0, 5).join(",  ") + ",  ?" }, answer: ans, numeric: true };
+    }
+  }
+  return { prompt: { big: "2, 4, 8, 16, 32, ?" }, answer: 64, numeric: true };
+}
+
+const NOUNS = ["marlots", "vexins", "dorbs", "feltrins", "quibs", "sarnets", "plimms", "tovaks", "renlos", "zorads"];
+function genSyll(level) {
+  const [A, B, C] = shuffle(NOUNS).slice(0, 3);
+  const X = pick(["Kel", "Rav", "Tam", "Ori", "Zed"]);
+  const forms = level <= 4
+    ? ["valid1", "validNeg", "affirmCons", "someInfo", "contra"]
+    : ["valid1", "validNeg", "affirmCons", "someInfo", "contra", "chain", "chainBreak", "noSome"];
+  const f = pick(forms);
+  let lines = [], concl = "", ans = "";
+  if (f === "valid1") { lines = [`All ${A} are ${B}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is a ${B.slice(0, -1)}.`; ans = "MUST BE TRUE"; }
+  if (f === "validNeg") { lines = [`No ${A} are ${B}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is not a ${B.slice(0, -1)}.`; ans = "MUST BE TRUE"; }
+  if (f === "contra") { lines = [`No ${A} are ${B}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is a ${B.slice(0, -1)}.`; ans = "CANNOT BE TRUE"; }
+  if (f === "affirmCons") { lines = [`All ${A} are ${B}.`, `${X} is a ${B.slice(0, -1)}.`]; concl = `${X} is a ${A.slice(0, -1)}.`; ans = "NOT ENOUGH INFO"; }
+  if (f === "someInfo") { lines = [`Some ${A} are ${B}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is a ${B.slice(0, -1)}.`; ans = "NOT ENOUGH INFO"; }
+  if (f === "chain") { lines = [`All ${A} are ${B}.`, `All ${B} are ${C}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is a ${C.slice(0, -1)}.`; ans = "MUST BE TRUE"; }
+  if (f === "chainBreak") { lines = [`All ${A} are ${B}.`, `All ${C} are ${B}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is a ${C.slice(0, -1)}.`; ans = "NOT ENOUGH INFO"; }
+  if (f === "noSome") { lines = [`No ${A} are ${B}.`, `Some ${B} are ${C}.`, `${X} is a ${A.slice(0, -1)}.`]; concl = `${X} is a ${B.slice(0, -1)}.`; ans = "CANNOT BE TRUE"; }
+  return { prompt: { lines, q: `Conclusion: ${concl}` }, options: ["MUST BE TRUE", "CANNOT BE TRUE", "NOT ENOUGH INFO"], answer: ans };
+}
+
+function genEV(level) {
+  const nOpts = level >= 5 ? 3 : 2;
+  const askWorst = level >= 6 && Math.random() < 0.35;
+  for (let t = 0; t < 80; t++) {
+    const opts = [];
+    for (let i = 0; i < nOpts; i++) {
+      if (Math.random() < 0.2) { const z = R(5, 40); opts.push({ text: `Guaranteed +£${z}`, ev: z, worst: z }); }
+      else { const p = pick([30, 40, 50, 60, 70, 80]); const win = R(20, 120); const lose = R(5, 60); opts.push({ text: `${p}% chance of +£${win}, otherwise −£${lose}`, ev: (p / 100) * win - (1 - p / 100) * lose, worst: -lose }); }
+    }
+    const evs = opts.map((o) => o.ev);
+    const worsts = opts.map((o) => o.worst);
+    const sorted = [...evs].sort((a, b) => b - a);
+    const gap = sorted[0] - sorted[1];
+    const minGap = Math.max(3, 14 - level);
+    const target = askWorst ? worsts.indexOf(Math.max(...worsts)) : evs.indexOf(Math.max(...evs));
+    const wSorted = [...worsts].sort((a, b) => b - a);
+    const wOk = wSorted[0] - wSorted[1] >= 4;
+    if ((askWorst ? wOk : gap >= minGap && gap <= minGap * 4)) {
+      const labels = ["A", "B", "C"].slice(0, nOpts);
+      return {
+        prompt: { lines: opts.map((o, i) => `${labels[i]}:  ${o.text}`), q: askWorst ? "Which option has the SMALLEST possible loss?" : "Which option has the HIGHEST expected value?" },
+        options: labels, answer: labels[target],
+      };
+    }
+  }
+  return { prompt: { lines: ["A:  50% chance of +£60, otherwise −£10", "B:  Guaranteed +£12"], q: "Which option has the HIGHEST expected value?" }, options: ["A", "B"], answer: "A" };
+}
+
+/* ---------- storage ---------- */
+const SKEY = "sharp-v1";
+const DEFAULT_STATE = () => ({
+  created: todayStr(),
+  streak: { cur: 0, best: 0, last: null },
+  levels: Object.fromEntries(GAME_IDS.map((g) => [g, 2])),
+  hist: Object.fromEntries(GAME_IDS.map((g) => [g, []])),
+  sessions: [],
+  mem: [],
+  calib: { 50: { n: 0, c: 0 }, 70: { n: 0, c: 0 }, 90: { n: 0, c: 0 } },
+});
+
+async function loadState() {
+  try { const v = localStorage.getItem(SKEY); if (v) return { ...DEFAULT_STATE(), ...JSON.parse(v) }; } catch (e) { }
+  return DEFAULT_STATE();
+}
+async function saveState(s) { try { localStorage.setItem(SKEY, JSON.stringify(s)); } catch (e) { console.error("save failed", e); } }
+
+/* ---------- scoring / selection ---------- */
+const recentAcc = (hist) => { const h = hist.slice(-5); return h.length ? mean(h.map((x) => x.acc)) : null; };
+function gameScore(state, id) {
+  const ra = recentAcc(state.hist[id]);
+  if (ra === null) return null;
+  return Math.round(((state.levels[id] - 1) / 9) * 55 + ra * 45);
+}
+function weakestGames(state) {
+  const scored = GAME_IDS.map((id) => ({ id, s: gameScore(state, id) }));
+  const untrained = shuffle(scored.filter((x) => x.s === null).map((x) => x.id));
+  const trained = scored.filter((x) => x.s !== null).sort((a, b) => a.s - b.s).map((x) => x.id);
+  return [...untrained, ...trained];
+}
+function adaptLevel(lvl, acc) {
+  if (acc >= 0.9) return Math.min(10, lvl + 1);
+  if (acc < 0.6) return Math.max(1, lvl - 1);
+  return lvl;
+}
+function buildPlan(state, mode) {
+  const order = weakestGames(state);
+  const primary = order[0];
+  const secondary = order.find((g) => GAMES[g].cat !== GAMES[primary].cat) || order[1];
+  const speedPool = ["stroop", "rswitch"].filter((g) => g !== primary && g !== secondary);
+  const speed = speedPool.length ? pick(speedPool) : null;
+  const pendingDelayed = state.mem.find((m) => m.immediate !== null && m.delayed === null && m.date !== todayStr());
+  const newSet = makeMemorySet();
+  const plan = [{ type: "readiness" }];
+  if (pendingDelayed) plan.push({ type: "recall", set: pendingDelayed, delayed: true });
+  plan.push({ type: "memshow", set: newSet });
+  if (mode === "quick") {
+    plan.push({ type: "game", id: primary, count: 8 });
+    if (speed) plan.push({ type: "game", id: speed, count: 14 });
+  } else {
+    plan.push({ type: "game", id: "arith", warm: true, count: 6 });
+    plan.push({ type: "game", id: primary, count: 8 });
+    plan.push({ type: "game", id: secondary, count: 8 });
+    if (speed) plan.push({ type: "game", id: speed, count: 18 });
+  }
+  plan.push({ type: "recall", set: newSet, delayed: false });
+  plan.push({ type: "debrief" });
+  return { plan, primary, secondary, newSet };
+}
+
+/* ---------- CSS ---------- */
+const CSS = `
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{background:#0C0F13}
+.app{min-height:100vh;background:#0C0F13;color:#E9E7E1;font-family:'Archivo',system-ui,sans-serif;max-width:520px;margin:0 auto;padding-bottom:84px;position:relative}
+.mono{font-family:'IBM Plex Mono',monospace}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A94A0}
+.hdr{padding:20px 18px 8px;display:flex;justify-content:space-between;align-items:baseline}
+.hdr h1{font-size:19px;font-weight:800;letter-spacing:.14em}
+.hdr h1 span{color:#F2A93B}
+.wrap{padding:10px 16px 20px;display:flex;flex-direction:column;gap:12px}
+.card{background:#141920;border:1px solid #232B35;border-radius:12px;padding:16px}
+.card h3{font-size:14px;font-weight:700;margin-bottom:8px;letter-spacing:.02em}
+.dim{color:#8A94A0;font-size:12.5px;line-height:1.5}
+.big{font-family:'IBM Plex Mono',monospace;font-size:34px;font-weight:600;text-align:center;line-height:1.25;word-break:break-word}
+.btn{display:block;width:100%;padding:15px;border-radius:10px;border:1px solid #2B3542;background:#1A212B;color:#E9E7E1;font-family:'Archivo',sans-serif;font-size:15px;font-weight:700;letter-spacing:.03em;cursor:pointer;text-align:center}
+.btn:active{transform:scale(.985)}
+.btn.pri{background:#F2A93B;border-color:#F2A93B;color:#14100A}
+.btn.ghost{background:transparent}
+.btn.small{padding:10px;font-size:13px;width:auto;display:inline-block}
+.row{display:flex;gap:8px}
+.row>*{flex:1}
+.meter{display:flex;gap:3px;margin-top:6px}
+.meter i{flex:1;height:9px;border-radius:2px;background:#222A34}
+.meter i.on{background:#F2A93B}
+.meter i.on.hi{background:#59C98F}
+.nav{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:0 auto;display:flex;background:#10141A;border-top:1px solid #232B35;z-index:10}
+.nav button{flex:1;padding:14px 0 18px;background:none;border:none;color:#5E6873;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.18em;cursor:pointer}
+.nav button.on{color:#F2A93B}
+.tbar{height:4px;background:#222A34;border-radius:2px;overflow:hidden;margin:10px 0 2px}
+.tbar i{display:block;height:100%;background:#F2A93B;transition:width .1s linear}
+.tbar i.low{background:#E4645C}
+.opt{padding:15px;border:1px solid #2B3542;border-radius:10px;background:#1A212B;font-family:'IBM Plex Mono',monospace;font-size:14.5px;font-weight:500;cursor:pointer;color:#E9E7E1;width:100%;text-align:left;margin-bottom:8px}
+.opt:active{border-color:#F2A93B}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.kp button{padding:15px 0;font-size:20px;border-radius:10px;border:1px solid #2B3542;background:#1A212B;color:#E9E7E1;font-family:'IBM Plex Mono',monospace;cursor:pointer}
+.kp button:active{border-color:#F2A93B}
+.kp .go{background:#F2A93B;color:#14100A;border-color:#F2A93B;font-weight:600}
+.kin{font-family:'IBM Plex Mono',monospace;font-size:30px;text-align:center;min-height:44px;border-bottom:2px solid #2B3542;padding:4px 0;letter-spacing:.08em}
+.fb{text-align:center;padding:28px 0}
+.fb .mk{font-size:40px}
+.fb.ok .mk{color:#59C98F}
+.fb.no .mk{color:#E4645C}
+.fb .cv{font-family:'IBM Plex Mono',monospace;color:#8A94A0;margin-top:6px;font-size:14px}
+.gline{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #1D242E;font-size:13px}
+.gline:last-child{border:none}
+.gline .mono{color:#F2A93B}
+.pill{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;border:1px solid #2B3542;border-radius:5px;padding:3px 7px;color:#8A94A0;text-transform:uppercase}
+.stat{font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:600}
+.stroopW{font-family:'Archivo',sans-serif;font-weight:800;font-size:46px;text-align:center;letter-spacing:.05em;padding:34px 0}
+.cbtn{padding:16px 0;border-radius:10px;border:1px solid #2B3542;background:#1A212B;font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;cursor:pointer;color:#E9E7E1;display:flex;align-items:center;justify-content:center;gap:8px}
+.chip{width:12px;height:12px;border-radius:3px;display:inline-block}
+.slider{display:flex;gap:6px;margin-top:6px}
+.slider button{flex:1;padding:12px 0;border-radius:8px;border:1px solid #2B3542;background:#1A212B;color:#8A94A0;font-family:'IBM Plex Mono',monospace;cursor:pointer}
+.slider button.on{background:#F2A93B;border-color:#F2A93B;color:#14100A;font-weight:600}
+.abort{position:absolute;top:16px;right:16px;background:none;border:none;color:#5E6873;font-size:20px;cursor:pointer;z-index:5}
+textarea.exp{width:100%;height:220px;background:#0C0F13;border:1px solid #2B3542;border-radius:8px;color:#8A94A0;font-family:'IBM Plex Mono',monospace;font-size:10px;padding:8px}
+input.tin{width:100%;background:#0C0F13;border:1px solid #2B3542;border-radius:10px;color:#E9E7E1;font-family:'IBM Plex Mono',monospace;font-size:16px;padding:14px}
+.spark{width:100%;height:56px}
+`;
+
+/* ---------- small components ---------- */
+const Meter = ({ v, max = 100 }) => (
+  <div className="meter">{Array.from({ length: 10 }, (_, i) => (
+    <i key={i} className={(i + 1) * (max / 10) <= v ? "on" + (v >= max * 0.8 ? " hi" : "") : ""} />
+  ))}</div>
+);
+
+function Keypad({ value, setValue, onSubmit }) {
+  const key = (k) => {
+    if (k === "C") setValue("");
+    else if (k === "GO") onSubmit();
+    else if (value.length < 6) setValue(value + k);
+  };
+  return (
+    <div>
+      <div className="kin">{value || "\u00A0"}</div>
+      <div className="kp">
+        {["7", "8", "9", "4", "5", "6", "1", "2", "3", "C", "0"].map((k) => (
+          <button key={k} onClick={() => key(k)}>{k}</button>
+        ))}
+        <button className="go" onClick={() => key("GO")}>↵</button>
+      </div>
+    </div>
+  );
+}
+
+/* ---------- generic question block (arith / estim / seq / syll / ev) ---------- */
+function QBlock({ qs, timePerQ, confidence, onDone }) {
+  const [i, setI] = useState(0);
+  const [phase, setPhase] = useState("q");
+  const [input, setInput] = useState("");
+  const [left, setLeft] = useState(timePerQ);
+  const res = useRef([]);
+  const pend = useRef(null);
+  const t0 = useRef(Date.now());
+  const answered = useRef(false);
+  const q = qs[i];
+
+  useEffect(() => {
+    answered.current = false;
+    setInput(""); setPhase("q"); setLeft(timePerQ);
+    t0.current = Date.now();
+    const tm = setInterval(() => {
+      const rem = timePerQ - (Date.now() - t0.current) / 1000;
+      setLeft(Math.max(0, rem));
+      if (rem <= 0 && !answered.current) { answered.current = true; clearInterval(tm); pend.current = { correct: false, rt: timePerQ, timeout: true }; setPhase("fb-timeout"); scheduleNext(); }
+    }, 100);
+    return () => clearInterval(tm);
+    // eslint-disable-next-line
+  }, [i]);
+
+  const scheduleNext = () => setTimeout(() => { res.current.push(pend.current); if (i + 1 < qs.length) setI(i + 1); else finishAll(); }, 950);
+
+  const finishAll = () => {
+    const r = res.current;
+    onDone({ attempts: r, acc: r.length ? r.filter((x) => x.correct).length / r.length : 0, medRt: median(r.filter((x) => !x.timeout).map((x) => x.rt)) });
+  };
+
+  const answer = (val) => {
+    if (answered.current) return;
+    answered.current = true;
+    const rt = (Date.now() - t0.current) / 1000;
+    const correct = q.numeric ? Number(val) === q.answer : val === q.answer;
+    pend.current = { correct, rt, timeout: false, given: val };
+    if (confidence) setPhase("conf");
+    else { setPhase(correct ? "fb-ok" : "fb-no"); scheduleNext(); }
+  };
+  const setConf = (c) => { pend.current.conf = c; setPhase(pend.current.correct ? "fb-ok" : "fb-no"); scheduleNext(); };
+
+  return (
+    <div className="card">
+      <div className="eyebrow">{i + 1} / {qs.length}</div>
+      <div className="tbar"><i className={left < timePerQ * 0.25 ? "low" : ""} style={{ width: `${(left / timePerQ) * 100}%` }} /></div>
+      {phase === "q" && (
+        <div style={{ marginTop: 14 }}>
+          {q.prompt.lines && q.prompt.lines.map((l, k) => <div key={k} className="mono" style={{ fontSize: 14.5, lineHeight: 1.7 }}>{l}</div>)}
+          {q.prompt.big && <div className="big" style={{ padding: "22px 0" }}>{q.prompt.big}</div>}
+          {q.prompt.q && <div className="dim" style={{ margin: "12px 0", color: "#C8C4BB", fontSize: 13.5 }}>{q.prompt.q}</div>}
+          {q.numeric
+            ? <Keypad value={input} setValue={setInput} onSubmit={() => input !== "" && answer(input)} />
+            : <div style={{ marginTop: 10 }}>{q.options.map((o) => <button key={o} className="opt" onClick={() => answer(o)}>{o}</button>)}</div>}
+        </div>
+      )}
+      {phase === "conf" && (
+        <div style={{ marginTop: 20 }}>
+          <div className="dim" style={{ textAlign: "center", marginBottom: 12 }}>How confident are you?</div>
+          <div className="row">{[50, 70, 90].map((c) => <button key={c} className="btn" onClick={() => setConf(c)}>{c}%</button>)}</div>
+        </div>
+      )}
+      {phase === "fb-ok" && <div className="fb ok"><div className="mk">✓</div><div className="cv">correct</div></div>}
+      {phase === "fb-no" && <div className="fb no"><div className="mk">✗</div><div className="cv">answer: {q.numeric ? fmt(q.answer) : q.answer}</div></div>}
+      {phase === "fb-timeout" && <div className="fb no"><div className="mk">✗</div><div className="cv">time — answer: {q.numeric ? fmt(q.answer) : q.answer}</div></div>}
+    </div>
+  );
+}
+
+/* ---------- Stroop ---------- */
+const INKS = [{ n: "RED", h: "#E4645C" }, { n: "BLUE", h: "#7FB0D6" }, { n: "AMBER", h: "#F2A93B" }, { n: "GREEN", h: "#59C98F" }];
+function StroopGame({ level, count, onDone }) {
+  const trials = useRef(Array.from({ length: count }, () => {
+    const incong = Math.random() < Math.min(0.85, 0.45 + level * 0.05);
+    const ink = pick(INKS);
+    let word = ink;
+    if (incong) { do { word = pick(INKS); } while (word.n === ink.n); }
+    return { word: word.n, ink };
+  })).current;
+  const timeLimit = Math.max(1.1, 2.7 - level * 0.15);
+  const [i, setI] = useState(0);
+  const [left, setLeft] = useState(timeLimit);
+  const [fb, setFb] = useState(null);
+  const res = useRef([]);
+  const t0 = useRef(Date.now());
+  const done = useRef(false);
+
+  useEffect(() => {
+    done.current = false; setFb(null); t0.current = Date.now(); setLeft(timeLimit);
+    const tm = setInterval(() => {
+      const rem = timeLimit - (Date.now() - t0.current) / 1000;
+      setLeft(Math.max(0, rem));
+      if (rem <= 0 && !done.current) { done.current = true; clearInterval(tm); record(null); }
+    }, 80);
+    return () => clearInterval(tm);
+    // eslint-disable-next-line
+  }, [i]);
+
+  const record = (choice) => {
+    const t = trials[i];
+    const correct = choice === t.ink.n;
+    res.current.push({ correct, rt: (Date.now() - t0.current) / 1000, timeout: choice === null, incong: t.word !== t.ink.n });
+    setFb(correct ? "ok" : "no");
+    setTimeout(() => {
+      if (i + 1 < count) setI(i + 1);
+      else {
+        const r = res.current;
+        const inc = r.filter((x) => x.incong), con = r.filter((x) => !x.incong);
+        onDone({ attempts: r, acc: r.filter((x) => x.correct).length / r.length, medRt: median(r.filter((x) => !x.timeout).map((x) => x.rt)), meta: { incAcc: inc.length ? inc.filter((x) => x.correct).length / inc.length : 1, conAcc: con.length ? con.filter((x) => x.correct).length / con.length : 1 } });
+      }
+    }, 320);
+  };
+  const tap = (n) => { if (done.current || fb) return; done.current = true; record(n); };
+  const t = trials[i];
+  return (
+    <div className="card">
+      <div className="eyebrow">{i + 1} / {count} — tap the ink colour</div>
+      <div className="tbar"><i className={left < timeLimit * 0.3 ? "low" : ""} style={{ width: `${(left / timeLimit) * 100}%` }} /></div>
+      <div className="stroopW" style={{ color: t.ink.h, opacity: fb ? 0.25 : 1 }}>{t.word}</div>
+      <div className="row" style={{ flexWrap: "wrap" }}>
+        {INKS.map((c) => (
+          <button key={c.n} className="cbtn" style={{ minWidth: "45%" }} onClick={() => tap(c.n)}>
+            <span className="chip" style={{ background: c.h }} />{c.n}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Rule Switch ---------- */
+const RULES = [
+  { key: "even", label: "EVEN NUMBER", test: (c) => c.num % 2 === 0 },
+  { key: "gt5", label: "GREATER THAN 5", test: (c) => c.num > 5 },
+  { key: "blue", label: "BLUE CARD", test: (c) => c.color === "#7FB0D6" },
+  { key: "tri", label: "TRIANGLE", test: (c) => c.shape === "▲" },
+];
+function SwitchGame({ level, count, onDone }) {
+  const trials = useRef((() => {
+    const out = []; let rule = pick(RULES); let sinceSwitch = 0; let nextSwitch = R(4, 7); let hasSwitched = false;
+    for (let i = 0; i < count; i++) {
+      if (i > 0 && sinceSwitch >= nextSwitch) { let nr; do { nr = pick(RULES); } while (nr.key === rule.key); rule = nr; sinceSwitch = 0; nextSwitch = R(Math.max(3, 6 - Math.floor(level / 3)), 8); hasSwitched = true; }
+      out.push({ num: R(1, 9), color: pick(["#7FB0D6", "#F2A93B"]), shape: pick(["▲", "●"]), rule, fresh: hasSwitched && sinceSwitch <= 1 });
+      sinceSwitch++;
+    }
+    return out;
+  })()).current;
+  const timeLimit = Math.max(1.6, 3.6 - level * 0.18);
+  const [i, setI] = useState(0);
+  const [left, setLeft] = useState(timeLimit);
+  const [fb, setFb] = useState(null);
+  const res = useRef([]);
+  const t0 = useRef(Date.now());
+  const done = useRef(false);
+  const t = trials[i];
+  const switched = i > 0 && trials[i - 1].rule.key !== t.rule.key;
+
+  useEffect(() => {
+    done.current = false; setFb(null); t0.current = Date.now(); setLeft(timeLimit);
+    const tm = setInterval(() => {
+      const rem = timeLimit - (Date.now() - t0.current) / 1000;
+      setLeft(Math.max(0, rem));
+      if (rem <= 0 && !done.current) { done.current = true; clearInterval(tm); record(null); }
+    }, 80);
+    return () => clearInterval(tm);
+    // eslint-disable-next-line
+  }, [i]);
+
+  const record = (choice) => {
+    const match = t.rule.test(t);
+    const correct = choice === null ? false : choice === match;
+    res.current.push({ correct, rt: (Date.now() - t0.current) / 1000, timeout: choice === null, fresh: t.fresh });
+    setFb(correct ? "ok" : "no");
+    setTimeout(() => {
+      if (i + 1 < count) setI(i + 1);
+      else {
+        const r = res.current;
+        const fr = r.filter((x) => x.fresh), st = r.filter((x) => !x.fresh);
+        onDone({ attempts: r, acc: r.filter((x) => x.correct).length / r.length, medRt: median(r.filter((x) => !x.timeout).map((x) => x.rt)), meta: { freshAcc: fr.length ? fr.filter((x) => x.correct).length / fr.length : 1, stableAcc: st.length ? st.filter((x) => x.correct).length / st.length : 1 } });
+      }
+    }, 320);
+  };
+  const tap = (v) => { if (done.current || fb) return; done.current = true; record(v); };
+  return (
+    <div className="card">
+      <div className="eyebrow" style={switched ? { color: "#F2A93B" } : {}}>{switched ? "⟲ RULE CHANGED — " : ""}RULE: {t.rule.label}</div>
+      <div className="tbar"><i className={left < timeLimit * 0.3 ? "low" : ""} style={{ width: `${(left / timeLimit) * 100}%` }} /></div>
+      <div style={{ textAlign: "center", padding: "26px 0", opacity: fb ? 0.25 : 1 }}>
+        <span style={{ fontSize: 58, color: t.color, fontWeight: 800 }}>{t.shape}</span>
+        <span className="mono" style={{ fontSize: 58, color: t.color, fontWeight: 600, marginLeft: 18 }}>{t.num}</span>
+      </div>
+      <div className="row">
+        <button className="btn" onClick={() => tap(true)}>MATCH</button>
+        <button className="btn" onClick={() => tap(false)}>NO</button>
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Reverse Span ---------- */
+function SpanGame({ level, onDone }) {
+  const nTrials = 6;
+  const [trial, setTrial] = useState(0);
+  const [len, setLen] = useState(3 + Math.ceil(level / 2));
+  const [phase, setPhase] = useState("show");
+  const [seq, setSeq] = useState([]);
+  const [showIdx, setShowIdx] = useState(-1);
+  const [input, setInput] = useState("");
+  const res = useRef([]);
+  const maxLen = useRef(0);
+
+  useEffect(() => {
+    const s = Array.from({ length: len }, () => R(0, 9));
+    setSeq(s); setInput(""); setShowIdx(-1); setPhase("show");
+    let k = -1;
+    const tm = setInterval(() => {
+      k++;
+      if (k < s.length) setShowIdx(k);
+      else { clearInterval(tm); setShowIdx(-1); setPhase("input"); }
+    }, 750);
+    return () => clearInterval(tm);
+    // eslint-disable-next-line
+  }, [trial]);
+
+  const submit = () => {
+    const target = [...seq].reverse().join("");
+    const correct = input === target;
+    if (correct) maxLen.current = Math.max(maxLen.current, len);
+    res.current.push({ correct, rt: 0, len });
+    setPhase(correct ? "ok" : "no");
+    setTimeout(() => {
+      if (trial + 1 < nTrials) { setLen((l) => Math.max(3, Math.min(10, l + (correct ? 1 : -1)))); setTrial(trial + 1); }
+      else { const r = res.current; onDone({ attempts: r, acc: r.filter((x) => x.correct).length / r.length, medRt: 0, meta: { maxLen: maxLen.current } }); }
+    }, 950);
+  };
+
+  return (
+    <div className="card">
+      <div className="eyebrow">{trial + 1} / {nTrials} — length {len}</div>
+      {phase === "show" && <div className="big" style={{ padding: "44px 0", fontSize: 54 }}>{showIdx >= 0 ? seq[showIdx] : "·"}</div>}
+      {phase === "input" && (
+        <div style={{ marginTop: 10 }}>
+          <div className="dim" style={{ textAlign: "center" }}>Enter in REVERSE order</div>
+          <Keypad value={input} setValue={setInput} onSubmit={() => input.length > 0 && submit()} />
+        </div>
+      )}
+      {phase === "ok" && <div className="fb ok"><div className="mk">✓</div></div>}
+      {phase === "no" && <div className="fb no"><div className="mk">✗</div><div className="cv">reverse: {[...seq].reverse().join(" ")}</div></div>}
+    </div>
+  );
+}
+
+/* ---------- Readiness ---------- */
+function Readiness({ onDone }) {
+  const dims = ["Sleep quality", "Mental energy", "Stress (5 = calm)", "Motivation"];
+  const [vals, setVals] = useState({});
+  const [phase, setPhase] = useState("rate");
+  const [rphase, setRphase] = useState("idle");
+  const rts = useRef([]);
+  const t0 = useRef(0);
+  const timer = useRef(null);
+  const complete = dims.every((d) => vals[d]);
+
+  const startTrial = () => {
+    setRphase("wait");
+    timer.current = setTimeout(() => { t0.current = Date.now(); setRphase("go"); }, R(900, 2400));
+  };
+  const tap = () => {
+    if (rphase === "wait") { clearTimeout(timer.current); setRphase("false"); setTimeout(startTrial, 700); return; }
+    if (rphase !== "go") return;
+    rts.current.push(Date.now() - t0.current);
+    if (rts.current.length >= 4) { setRphase("done"); }
+    else { setRphase("idle"); setTimeout(startTrial, 500); }
+  };
+  useEffect(() => {
+    if (phase === "react" && rphase === "idle" && rts.current.length === 0) startTrial();
+    return () => clearTimeout(timer.current);
+    // eslint-disable-next-line
+  }, [phase]);
+
+  return (
+    <div className="wrap">
+      {phase === "rate" && (
+        <div className="card">
+          <div className="eyebrow">Readiness check</div>
+          <h3 style={{ marginTop: 6 }}>Rate honestly — this calibrates today's data, it doesn't excuse it.</h3>
+          {dims.map((d) => (
+            <div key={d} style={{ marginTop: 14 }}>
+              <div className="dim">{d}</div>
+              <div className="slider">{[1, 2, 3, 4, 5].map((v) => (
+                <button key={v} className={vals[d] === v ? "on" : ""} onClick={() => setVals({ ...vals, [d]: v })}>{v}</button>
+              ))}</div>
+            </div>
+          ))}
+          <button className="btn pri" style={{ marginTop: 18, opacity: complete ? 1 : 0.4 }} onClick={() => complete && setPhase("react")}>Reaction test →</button>
+        </div>
+      )}
+      {phase === "react" && (
+        <div className="card" onClick={tap} style={{ cursor: "pointer", minHeight: 300, display: "flex", flexDirection: "column", justifyContent: "center", background: rphase === "go" ? "#F2A93B" : "#141920" }}>
+          {rphase !== "done" ? (
+            <div style={{ textAlign: "center" }}>
+              <div className="big" style={{ color: rphase === "go" ? "#14100A" : rphase === "false" ? "#E4645C" : "#5E6873", fontSize: 26 }}>
+                {rphase === "go" ? "TAP NOW" : rphase === "false" ? "TOO EARLY" : "WAIT…"}
+              </div>
+              <div className="dim" style={{ marginTop: 10, color: rphase === "go" ? "#14100A" : "#5E6873" }}>trial {rts.current.length + 1} / 4</div>
+            </div>
+          ) : (
+            <div style={{ textAlign: "center" }}>
+              <div className="eyebrow">median reaction</div>
+              <div className="stat" style={{ margin: "8px 0" }}>{Math.round(median(rts.current))} ms</div>
+              <button className="btn pri" style={{ marginTop: 10 }} onClick={(e) => { e.stopPropagation(); onDone({ ...vals, reaction: Math.round(median(rts.current)) }); }}>Continue →</button>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ---------- Memory show / recall ---------- */
+function MemShow({ set, onDone }) {
+  const [left, setLeft] = useState(30);
+  useEffect(() => { const t = setInterval(() => setLeft((l) => Math.max(0, l - 1)), 1000); return () => clearInterval(t); }, []);
+  return (
+    <div className="wrap">
+      <div className="card">
+        <div className="eyebrow">Memory encoding — recalled later today and next session</div>
+        <div className="tbar"><i style={{ width: `${(left / 30) * 100}%` }} /></div>
+        <div style={{ padding: "16px 0" }}>
+          <div className="dim">Five words:</div>
+          <div className="mono" style={{ fontSize: 19, lineHeight: 1.9, marginTop: 4 }}>{set.words.join("  ·  ")}</div>
+          <div className="dim" style={{ marginTop: 14 }}>One fact:</div>
+          <div className="mono" style={{ fontSize: 16, marginTop: 4 }}>{set.fact.name} — {set.fact.place} — code {set.fact.code}</div>
+        </div>
+        <button className="btn pri" onClick={onDone} style={{ opacity: left > 20 ? 0.4 : 1 }} disabled={left > 20}>I've encoded it →</button>
+      </div>
+    </div>
+  );
+}
+
+function MemRecall({ set, delayed, onDone }) {
+  const [txt, setTxt] = useState("");
+  const [phase, setPhase] = useState("words");
+  const [wordScore, setWordScore] = useState(0);
+  const askCode = useRef(Math.random() < 0.5).current;
+  const factOpts = useRef(askCode
+    ? shuffle([set.fact.code, ...Array.from({ length: 3 }, () => R(100, 999))].filter((v, i, a) => a.indexOf(v) === i).slice(0, 4)).map(String)
+    : shuffle([set.fact.place, ...shuffle(PLACES.filter((p) => p !== set.fact.place)).slice(0, 3)])
+  ).current;
+  const factAns = askCode ? String(set.fact.code) : set.fact.place;
+
+  const submitWords = () => {
+    const given = txt.toLowerCase().split(/[\s,]+/).filter(Boolean);
+    const hits = set.words.filter((w) => given.includes(w)).length;
+    setWordScore(hits); setPhase("fact");
+  };
+  const submitFact = (o) => {
+    const factOK = o === factAns;
+    setPhase("done");
+    setTimeout(() => onDone({ words: wordScore, fact: factOK ? 1 : 0 }), 1400);
+  };
+  return (
+    <div className="wrap">
+      <div className="card">
+        <div className="eyebrow">{delayed ? "Delayed recall — previous session" : "Recall — from session start"}</div>
+        {phase === "words" && (
+          <div style={{ marginTop: 10 }}>
+            <div className="dim" style={{ marginBottom: 10 }}>Type the five words, separated by spaces:</div>
+            <input className="tin" value={txt} onChange={(e) => setTxt(e.target.value)} placeholder="word word word…" />
+            <button className="btn pri" style={{ marginTop: 12 }} onClick={submitWords}>Submit</button>
+          </div>
+        )}
+        {phase === "fact" && (
+          <div style={{ marginTop: 10 }}>
+            <div className="dim" style={{ marginBottom: 4 }}>Words recovered: <span className="mono" style={{ color: "#F2A93B" }}>{wordScore}/5</span>{wordScore < 5 && <span> — set was: {set.words.join(", ")}</span>}</div>
+            <div style={{ margin: "14px 0 10px", fontSize: 14.5 }}>{askCode ? `What was ${set.fact.name}'s code?` : `Where was ${set.fact.name}?`}</div>
+            {factOpts.map((o) => <button key={o} className="opt" onClick={() => submitFact(o)}>{o}</button>)}
+          </div>
+        )}
+        {phase === "done" && <div className="fb ok"><div className="mk">✓</div><div className="cv">logged</div></div>}
+      </div>
+    </div>
+  );
+}
+
+/* ---------- insights ---------- */
+function buildInsights(blocks, recall) {
+  const out = [];
+  for (const b of blocks) {
+    if (b.id === "stroop" && b.meta && b.meta.conAcc - b.meta.incAcc >= 0.2)
+      out.push(`Interference capture: accuracy fell from ${pc(b.meta.conAcc)} (matching) to ${pc(b.meta.incAcc)} (conflicting). The word is overriding the colour.`);
+    if (b.id === "rswitch" && b.meta && b.meta.stableAcc - b.meta.freshAcc >= 0.2)
+      out.push(`Errors cluster immediately after rule changes (${pc(b.meta.freshAcc)} vs ${pc(b.meta.stableAcc)} once settled). You carry the old rule for 1–2 trials.`);
+    const wrong = b.attempts ? b.attempts.filter((a) => !a.correct && !a.timeout) : [];
+    const right = b.attempts ? b.attempts.filter((a) => a.correct) : [];
+    if (wrong.length >= 3 && right.length >= 3 && mean(wrong.map((a) => a.rt)) < mean(right.map((a) => a.rt)) * 0.65)
+      out.push(`In ${GAMES[b.id].name}, your errors were answered much faster than your correct responses — impulsive responding, not lack of ability.`);
+    const to = b.attempts ? b.attempts.filter((a) => a.timeout).length : 0;
+    if (b.attempts && to / b.attempts.length >= 0.3)
+      out.push(`${GAMES[b.id].name}: ${to} timeouts. You're accurate but too slow at this level — hold difficulty, push tempo.`);
+    const conf = b.attempts ? b.attempts.filter((a) => a.conf === 90) : [];
+    if (conf.length >= 3 && conf.filter((a) => a.correct).length / conf.length < 0.7)
+      out.push(`Overconfidence in ${GAMES[b.id].name}: at 90% stated confidence you were right ${pc(conf.filter((a) => a.correct).length / conf.length)} of the time.`);
+  }
+  if (recall && recall.words <= 2) out.push(`Weak immediate encoding: only ${recall.words}/5 words survived one session. Encode with imagery or a story next time, not repetition.`);
+  if (!out.length) out.push("No dominant error pattern this session. Difficulty will rise where you cleared 90%.");
+  return out.slice(0, 3);
+}
+
+/* ---------- Session runner ---------- */
+function Session({ state, setState, mode, onExit }) {
+  const built = useRef(buildPlan(state, mode)).current;
+  const [step, setStep] = useState(0);
+  const [subphase, setSubphase] = useState("instr");
+  const results = useRef({ blocks: [], readiness: null, recall: null, delayedRecall: null });
+  const startT = useRef(Date.now()).current;
+  const item = built.plan[step];
+
+  const next = () => { setSubphase("instr"); setStep((s) => s + 1); };
+
+  const persistBlock = (id, r, warm, lvl) => {
+    const s2 = { ...state };
+    if (!warm) {
+      s2.levels = { ...s2.levels, [id]: adaptLevel(lvl, r.acc) };
+      s2.hist = { ...s2.hist, [id]: [...s2.hist[id], { d: todayStr(), acc: +r.acc.toFixed(2), rt: +r.medRt.toFixed(2), lvl }].slice(-40) };
+      const cal = { ...s2.calib };
+      (r.attempts || []).forEach((a) => { if (a.conf) { cal[a.conf] = { n: cal[a.conf].n + 1, c: cal[a.conf].c + (a.correct ? 1 : 0) }; } });
+      s2.calib = cal;
+    }
+    setState(s2); saveState(s2);
+    return s2;
+  };
+
+  const finishSession = (recallScore) => {
+    const s2 = { ...state };
+    const newSet = { ...built.newSet, immediate: recallScore };
+    s2.mem = [...s2.mem.map((m) => (results.current.delayedRecall && m.date === results.current.delayedRecall.date ? { ...m, delayed: results.current.delayedRecall.score } : m)), newSet].slice(-8);
+    const t = todayStr(); const st = { ...s2.streak };
+    if (st.last !== t) {
+      const gap = st.last ? daysBetween(st.last, t) : 99;
+      st.cur = gap <= 2 ? st.cur + 1 : 1;
+      st.best = Math.max(st.best, st.cur); st.last = t;
+    }
+    s2.streak = st;
+    s2.sessions = [...s2.sessions, {
+      d: t, mode, min: Math.round((Date.now() - startT) / 60000),
+      ready: results.current.readiness,
+      blocks: results.current.blocks.map((b) => ({ id: b.id, acc: +b.acc.toFixed(2), rt: +b.medRt.toFixed(2), lvl: b.lvl, dlvl: b.dlvl })),
+      recall: recallScore,
+    }].slice(-30);
+    setState(s2); saveState(s2);
+  };
+
+  if (!item) return null;
+
+  if (item.type === "readiness") return <Readiness onDone={(r) => { results.current.readiness = r; next(); }} />;
+  if (item.type === "memshow") return <MemShow set={item.set} onDone={next} />;
+  if (item.type === "recall") return <MemRecall set={item.set} delayed={item.delayed} onDone={(sc) => {
+    if (item.delayed) { results.current.delayedRecall = { date: item.set.date, score: sc }; next(); }
+    else { results.current.recall = sc; finishSession(sc); next(); }
+  }} />;
+
+  if (item.type === "game") {
+    const id = item.id;
+    const lvl = item.warm ? Math.max(1, state.levels[id] - 2) : state.levels[id];
+    if (subphase === "instr") {
+      return (
+        <div className="wrap">
+          <div className="card">
+            <div className="eyebrow">{item.warm ? "Warm-up" : `Block — ${GAMES[id].domain}`} · level {lvl}</div>
+            <h3 style={{ fontSize: 20, margin: "8px 0" }}>{GAMES[id].name}</h3>
+            <div className="dim" style={{ fontSize: 14 }}>{GAMES[id].instr}</div>
+            <button className="btn pri" style={{ marginTop: 18 }} onClick={() => setSubphase("play")}>Start</button>
+          </div>
+        </div>
+      );
+    }
+    const done = (r) => {
+      const dlvl = item.warm ? 0 : adaptLevel(lvl, r.acc) - lvl;
+      if (!item.warm) results.current.blocks.push({ id, ...r, lvl, dlvl });
+      persistBlock(id, r, item.warm, lvl);
+      setSubphase("result");
+      setTimeout(next, 2200);
+    };
+    if (subphase === "result") {
+      const b = results.current.blocks[results.current.blocks.length - 1];
+      const shown = item.warm ? null : b;
+      return (
+        <div className="wrap"><div className="card" style={{ textAlign: "center" }}>
+          <div className="eyebrow">{GAMES[id].name} — complete</div>
+          {shown ? (<>
+            <div className="stat" style={{ margin: "10px 0" }}>{pc(shown.acc)}</div>
+            <div className="dim">median {shown.medRt.toFixed(1)}s{shown.dlvl > 0 ? " · level ↑" : shown.dlvl < 0 ? " · level ↓" : ""}</div>
+          </>) : <div className="dim" style={{ marginTop: 8 }}>Warm-up done.</div>}
+        </div></div>
+      );
+    }
+    const qs = { arith: () => Array.from({ length: item.count || 8 }, () => genArith(lvl)), estim: () => Array.from({ length: 8 }, () => genEstim(lvl)), seq: () => Array.from({ length: 7 }, () => genSeq(lvl)), syll: () => Array.from({ length: 7 }, () => genSyll(lvl)), ev: () => Array.from({ length: 6 }, () => genEV(lvl)) };
+    const times = { arith: Math.max(8, 22 - lvl * 1.2), estim: Math.max(6, 14 - lvl * 0.6), seq: 35, syll: 45, ev: 35 };
+    return (
+      <div className="wrap">
+        {id === "stroop" && <StroopGame level={lvl} count={item.count || 18} onDone={done} />}
+        {id === "rswitch" && <SwitchGame level={lvl} count={item.count || 22} onDone={done} />}
+        {id === "span" && <SpanGame level={lvl} onDone={done} />}
+        {["arith", "estim", "seq", "syll", "ev"].includes(id) && (
+          <QBlock qs={qs[id]()} timePerQ={times[id]} confidence={(id === "syll" || id === "ev") && lvl >= 3} onDone={done} />
+        )}
+      </div>
+    );
+  }
+
+  if (item.type === "debrief") {
+    const blocks = results.current.blocks;
+    const insights = buildInsights(blocks, results.current.recall);
+    const order = weakestGames(state);
+    return (
+      <div className="wrap">
+        <div className="card">
+          <div className="eyebrow">Session debrief</div>
+          {blocks.map((b, k) => (
+            <div key={k} className="gline">
+              <span>{GAMES[b.id].name}</span>
+              <span className="mono">{pc(b.acc)} · L{b.lvl}{b.dlvl > 0 ? "↑" : b.dlvl < 0 ? "↓" : ""}</span>
+            </div>
+          ))}
+          {results.current.recall && (
+            <div className="gline"><span>Recall (immediate)</span><span className="mono">{results.current.recall.words}/5 words · fact {results.current.recall.fact ? "✓" : "✗"}</span></div>
+          )}
+          {results.current.delayedRecall && (
+            <div className="gline"><span>Recall (delayed)</span><span className="mono">{results.current.delayedRecall.score.words}/5 · fact {results.current.delayedRecall.score.fact ? "✓" : "✗"}</span></div>
+          )}
+        </div>
+        <div className="card">
+          <div className="eyebrow">Findings</div>
+          {insights.map((t, i) => <div key={i} className="dim" style={{ color: "#C8C4BB", fontSize: 13.5, marginTop: 10, lineHeight: 1.55 }}>— {t}</div>)}
+          <div className="dim" style={{ marginTop: 14 }}>Next priority: <span style={{ color: "#F2A93B" }}>{GAMES[order[0]].name}</span></div>
+        </div>
+        <button className="btn pri" onClick={onExit}>Done</button>
+      </div>
+    );
+  }
+  return null;
+}
+
+/* ---------- Screens ---------- */
+function TodayScreen({ state, start }) {
+  const order = weakestGames(state);
+  const primary = order[0];
+  const pScore = gameScore(state, primary);
+  const trained = GAME_IDS.filter((g) => state.hist[g].length > 0).length;
+  const doneToday = state.streak.last === todayStr();
+  const pendingDelayed = state.mem.some((m) => m.immediate !== null && m.delayed === null && m.date !== todayStr());
+  return (
+    <div className="wrap">
+      <div className="card">
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div><div className="eyebrow">Streak</div><div className="stat">{state.streak.cur}<span style={{ fontSize: 13, color: "#8A94A0" }}> d</span></div></div>
+          <div><div className="eyebrow">Best</div><div className="stat">{state.streak.best}</div></div>
+          <div><div className="eyebrow">Sessions</div><div className="stat">{state.sessions.length}</div></div>
+        </div>
+        {doneToday && <div className="pill" style={{ marginTop: 12, color: "#59C98F", borderColor: "#2b4a3a" }}>Trained today</div>}
+      </div>
+      <div className="card">
+        <div className="eyebrow">Today's focus</div>
+        <h3 style={{ fontSize: 18, margin: "6px 0" }}>{GAMES[primary].name}</h3>
+        <div className="dim" style={{ fontSize: 13.5 }}>
+          {pScore === null
+            ? `No data yet for ${GAMES[primary].domain.toLowerCase()} — this session establishes your baseline there.`
+            : `Your lowest-rated system (${pScore}/100 at level ${state.levels[primary]}). The session leads with it, then contrasts with a different cognitive category.`}
+          {pendingDelayed && " A delayed memory test from your last session is also due."}
+        </div>
+      </div>
+      <button className="btn pri" onClick={() => start("standard")}>Standard session — ~15 min</button>
+      <button className="btn" onClick={() => start("quick")}>Quick session — ~7 min</button>
+      {trained < 8 && <div className="dim" style={{ textAlign: "center" }}>Baseline: {trained}/8 systems measured. Scores are provisional until all are covered.</div>}
+    </div>
+  );
+}
+
+function TrainScreen({ state, startFree }) {
+  return (
+    <div className="wrap">
+      <div className="dim">Free training. Blocks here still adapt difficulty and feed your stats, but don't count as a daily session.</div>
+      {GAME_IDS.map((id) => {
+        const s = gameScore(state, id);
+        return (
+          <button key={id} className="card" style={{ textAlign: "left", cursor: "pointer", width: "100%", border: "1px solid #232B35" }} onClick={() => startFree(id)}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+              <h3 style={{ margin: 0 }}>{GAMES[id].name}</h3>
+              <span className="mono" style={{ fontSize: 12, color: "#F2A93B" }}>L{state.levels[id]}</span>
+            </div>
+            <div className="dim" style={{ marginTop: 2 }}>{GAMES[id].domain}{s !== null ? ` · ${s}/100` : " · unmeasured"}</div>
+            <Meter v={s || 0} />
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function DataScreen({ state, setState }) {
+  const [showExp, setShowExp] = useState(false);
+  const [confirmWipe, setConfirmWipe] = useState(false);
+  const scores = GAME_IDS.map((id) => gameScore(state, id));
+  const trained = scores.filter((s) => s !== null);
+  const totalN = GAME_IDS.reduce((n, g) => n + state.hist[g].length, 0);
+  const cpi = trained.length ? Math.round(mean(scores.map((s) => s ?? 0))) : 0;
+  const provisional = trained.length < 8 || totalN < 20;
+  const recent = state.sessions.slice(-14);
+  const pts = recent.map((s, i) => {
+    const acc = mean(s.blocks.map((b) => b.acc));
+    return `${(i / Math.max(1, recent.length - 1)) * 100},${56 - acc * 50}`;
+  }).join(" ");
+  const wipe = async () => {
+    const fresh = DEFAULT_STATE(); setState(fresh); await saveState(fresh); setConfirmWipe(false);
+  };
+  return (
+    <div className="wrap">
+      <div className="card">
+        <div className="eyebrow">Cognitive performance index {provisional && "· provisional"}</div>
+        <div className="stat" style={{ fontSize: 40, margin: "6px 0" }}>{cpi}<span style={{ fontSize: 15, color: "#8A94A0" }}>/100</span></div>
+        <Meter v={cpi} />
+        <div className="dim" style={{ marginTop: 8 }}>Mean across all 8 systems — untrained systems count as zero, so neglect shows.</div>
+      </div>
+      {recent.length >= 2 && (
+        <div className="card">
+          <div className="eyebrow">Session accuracy — last {recent.length}</div>
+          <svg className="spark" viewBox="0 0 100 56" preserveAspectRatio="none">
+            <polyline points={pts} fill="none" stroke="#F2A93B" strokeWidth="1.6" />
+          </svg>
+        </div>
+      )}
+      <div className="card">
+        <div className="eyebrow">Systems</div>
+        {GAME_IDS.map((id) => {
+          const s = gameScore(state, id);
+          const h = state.hist[id].slice(-5);
+          return (
+            <div key={id} style={{ marginTop: 12 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13 }}>
+                <span>{GAMES[id].domain}</span>
+                <span className="mono" style={{ color: "#8A94A0", fontSize: 11.5 }}>
+                  {s === null ? "no data" : `${s}/100 · ${pc(mean(h.map((x) => x.acc)))} acc · ${mean(h.map((x) => x.rt)).toFixed(1)}s`}
+                </span>
+              </div>
+              <Meter v={s || 0} />
+            </div>
+          );
+        })}
+      </div>
+      <div className="card">
+        <div className="eyebrow">Memory retention</div>
+        {state.mem.slice(-5).reverse().map((m, i) => (
+          <div key={i} className="gline">
+            <span>{m.date}</span>
+            <span className="mono">
+              {m.immediate ? `same-day ${m.immediate.words}/5` : "pending"}
+              {m.delayed ? ` · delayed ${m.delayed.words}/5` : m.immediate && m.date !== todayStr() ? " · delayed due" : ""}
+            </span>
+          </div>
+        ))}
+        {!state.mem.length && <div className="dim">No memory sets yet — they're created at the start of each session.</div>}
+      </div>
+      <div className="card">
+        <div className="eyebrow">Confidence calibration</div>
+        {[50, 70, 90].map((c) => {
+          const d = state.calib[c];
+          return (
+            <div key={c} className="gline">
+              <span>Stated {c}%</span>
+              <span className="mono">{d.n ? `actual ${pc(d.c / d.n)} (n=${d.n})` : "no data"}</span>
+            </div>
+          );
+        })}
+        <div className="dim" style={{ marginTop: 8 }}>Actual well below stated = overconfident. Collected on logic and EV tasks.</div>
+      </div>
+      <div className="card">
+        <div className="eyebrow">Recent sessions</div>
+        {state.sessions.slice(-6).reverse().map((s, i) => (
+          <div key={i} className="gline">
+            <span>{s.d} · {s.mode}</span>
+            <span className="mono">{pc(mean(s.blocks.map((b) => b.acc)))} · {s.min}min</span>
+          </div>
+        ))}
+        {!state.sessions.length && <div className="dim">No sessions yet.</div>}
+      </div>
+      <div className="row">
+        <button className="btn small" onClick={() => setShowExp(!showExp)}>{showExp ? "Hide export" : "Export data"}</button>
+        <button className="btn small" style={{ color: "#E4645C" }} onClick={() => setConfirmWipe(true)}>Delete all data</button>
+      </div>
+      {confirmWipe && (
+        <div className="card" style={{ borderColor: "#E4645C" }}>
+          <div className="dim" style={{ color: "#E9E7E1", marginBottom: 12 }}>Delete ALL training history permanently? This cannot be undone.</div>
+          <div className="row">
+            <button className="btn small" onClick={() => setConfirmWipe(false)}>Cancel</button>
+            <button className="btn small" style={{ color: "#E4645C", borderColor: "#E4645C" }} onClick={wipe}>Delete everything</button>
+          </div>
+        </div>
+      )}
+      {showExp && <textarea className="exp" readOnly value={JSON.stringify(state, null, 1)} onFocus={(e) => e.target.select()} />}
+    </div>
+  );
+}
+
+/* ---------- Free-play wrapper ---------- */
+function FreePlay({ state, setState, id, onExit }) {
+  const [phase, setPhase] = useState("instr");
+  const [result, setResult] = useState(null);
+  const lvl = state.levels[id];
+  const done = (r) => {
+    const s2 = { ...state };
+    s2.levels = { ...s2.levels, [id]: adaptLevel(lvl, r.acc) };
+    s2.hist = { ...s2.hist, [id]: [...s2.hist[id], { d: todayStr(), acc: +r.acc.toFixed(2), rt: +r.medRt.toFixed(2), lvl }].slice(-40) };
+    const cal = { ...s2.calib };
+    (r.attempts || []).forEach((a) => { if (a.conf) cal[a.conf] = { n: cal[a.conf].n + 1, c: cal[a.conf].c + (a.correct ? 1 : 0) }; });
+    s2.calib = cal;
+    setState(s2); saveState(s2);
+    setResult({ ...r, dlvl: adaptLevel(lvl, r.acc) - lvl });
+    setPhase("result");
+  };
+  if (phase === "instr") return (
+    <div className="wrap"><div className="card">
+      <div className="eyebrow">Free training · level {lvl}</div>
+      <h3 style={{ fontSize: 20, margin: "8px 0" }}>{GAMES[id].name}</h3>
+      <div className="dim" style={{ fontSize: 14 }}>{GAMES[id].instr}</div>
+      <button className="btn pri" style={{ marginTop: 18 }} onClick={() => setPhase("play")}>Start</button>
+      <button className="btn ghost" style={{ marginTop: 8 }} onClick={onExit}>Back</button>
+    </div></div>
+  );
+  if (phase === "result") return (
+    <div className="wrap"><div className="card" style={{ textAlign: "center" }}>
+      <div className="eyebrow">{GAMES[id].name}</div>
+      <div className="stat" style={{ margin: "10px 0" }}>{pc(result.acc)}</div>
+      <div className="dim">median {result.medRt.toFixed(1)}s{result.dlvl > 0 ? " · level ↑" : result.dlvl < 0 ? " · level ↓" : ""}</div>
+      <div className="row" style={{ marginTop: 16 }}>
+        <button className="btn" onClick={() => { setResult(null); setPhase("instr"); }}>Again</button>
+        <button className="btn pri" onClick={onExit}>Done</button>
+      </div>
+    </div></div>
+  );
+  const qs = { arith: () => Array.from({ length: 10 }, () => genArith(lvl)), estim: () => Array.from({ length: 8 }, () => genEstim(lvl)), seq: () => Array.from({ length: 7 }, () => genSeq(lvl)), syll: () => Array.from({ length: 7 }, () => genSyll(lvl)), ev: () => Array.from({ length: 6 }, () => genEV(lvl)) };
+  const times = { arith: Math.max(8, 22 - lvl * 1.2), estim: Math.max(6, 14 - lvl * 0.6), seq: 35, syll: 45, ev: 35 };
+  return (
+    <div className="wrap">
+      {id === "stroop" && <StroopGame level={lvl} count={20} onDone={done} />}
+      {id === "rswitch" && <SwitchGame level={lvl} count={24} onDone={done} />}
+      {id === "span" && <SpanGame level={lvl} onDone={done} />}
+      {["arith", "estim", "seq", "syll", "ev"].includes(id) && (
+        <QBlock qs={qs[id]()} timePerQ={times[id]} confidence={(id === "syll" || id === "ev") && lvl >= 3} onDone={done} />
+      )}
+    </div>
+  );
+}
+
+/* ---------- App root ---------- */
+function App() {
+  const [state, setState] = useState(null);
+  const [tab, setTab] = useState("today");
+  const [session, setSession] = useState(null);
+  const [sKey, setSKey] = useState(0);
+
+  useEffect(() => { loadState().then(setState); }, []);
+  if (!state) return <div className="app"><style>{CSS}</style><div className="wrap" style={{ paddingTop: 80 }}><div className="eyebrow" style={{ textAlign: "center" }}>SHARP — loading…</div></div></div>;
+
+  const exitSession = () => { setSession(null); setSKey((k) => k + 1); loadState().then(setState); };
+
+  return (
+    <div className="app">
+      <style>{CSS}</style>
+      {session ? (
+        <>
+          <button className="abort" onClick={exitSession}>✕</button>
+          <div className="hdr"><h1>SHA<span>R</span>P</h1><span className="eyebrow">{session.free ? "free training" : session.mode}</span></div>
+          {session.free
+            ? <FreePlay key={sKey} state={state} setState={setState} id={session.free} onExit={exitSession} />
+            : <Session key={sKey} state={state} setState={setState} mode={session.mode} onExit={exitSession} />}
+        </>
+      ) : (
+        <>
+          <div className="hdr"><h1>SHA<span>R</span>P</h1><span className="eyebrow">{todayStr()}</span></div>
+          {tab === "today" && <TodayScreen state={state} start={(mode) => setSession({ mode })} />}
+          {tab === "train" && <TrainScreen state={state} startFree={(id) => setSession({ free: id })} />}
+          {tab === "data" && <DataScreen state={state} setState={setState} />}
+          <div className="nav">
+            {["today", "train", "data"].map((t) => (
+              <button key={t} className={tab === t ? "on" : ""} onClick={() => setTab(t)}>{t.toUpperCase()}</button>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+</script>
+</body>
+</html>
