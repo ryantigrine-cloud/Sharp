@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#080b10">
+<title>SHARP</title>
+<style>
+html,body{margin:0;min-height:100%;background:#080b10;color:#f4f7fa;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif}.load{max-width:700px;margin:auto;padding:calc(30px + env(safe-area-inset-top)) 20px}.card{margin-top:30px;padding:22px;border-radius:18px;background:#11161e;border:1px solid #26303d}h1{letter-spacing:.18em;font-size:18px}p{color:#8c98a8;line-height:1.5}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#d8ff5b;margin-right:8px}
+</style>
+</head>
+<body>
+<div class="load"><h1><span class="dot"></span>SHARP</h1><div class="card"><b>Loading patched build…</b><p>Applying iPhone timing compatibility fix.</p></div></div>
+<script>
+(async()=>{
+  try{
+    const response=await fetch('./index.html?source=1',{cache:'no-store'});
+    if(!response.ok) throw new Error('Could not load SHARP source ('+response.status+')');
+    let source=await response.text();
+    source=source.split('performance.now()').join('window.performance.now()');
+    document.open();
+    document.write(source);
+    document.close();
+  }catch(error){
+    document.body.innerHTML='<div class="load"><h1>SHARP</h1><div class="card"><b>Load error</b><p>'+String(error.message||error)+'</p></div></div>';
+  }
+})();
+</script>
+</body>
+</html>
