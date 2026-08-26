@@ -135,9 +135,15 @@ finishBlock=function(o={}){
 };
 
 // Dual-task response/timeout race protection.
+const sharpBaseBeginDualCycle=beginDualCycle;
+beginDualCycle=function(){
+  if(!active||active.screen!=='dual')return;
+  return sharpBaseBeginDualCycle();
+};
 const sharpBaseNextDualMath=nextDualMath;
 nextDualMath=function(){
-  if(active)active._dualSettled=false;
+  if(!active||active.screen!=='dual')return;
+  active._dualSettled=false;
   return sharpBaseNextDualMath();
 };
 const sharpBaseDualMathAnswer=dualMathAnswer;
@@ -182,6 +188,8 @@ if(typeof submitRecall==='function'){
 // ---------- Next-domain heads-up ----------
 const sharpBaseBlockResult=blockResult;
 blockResult=function(){
+  document.body.classList.remove('sharp-keyboard');
+  sharpSyncViewport();
   sharpBaseBlockResult();
   if(!active||active.practice)return;
   const nextIndex=active.bi+1;
