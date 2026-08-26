@@ -97,6 +97,9 @@ begin=function(){
     active._blockCommitted=false;
     active._dualSettled=false;
     active._nextBusy=false;
+    active.q=null;
+    active.qStart=null;
+    active.deadline=null;
   }
   return sharpBaseBegin();
 };
@@ -104,6 +107,8 @@ begin=function(){
 const sharpBaseNext=next;
 next=function(){
   if(!active)return;
+  // Ignore a stale delayed callback if a fresh unanswered question is already live.
+  if(active.screen==='question'&&active.q&&active.qStart&&!active._questionSettled)return;
   active._questionSettled=false;
   return sharpBaseNext();
 };
