@@ -123,3 +123,13 @@ document.addEventListener('selectstart',e=>{
 document.addEventListener('dragstart',e=>{
   if(e.target.closest('[data-reflex-hold]'))e.preventDefault();
 },{capture:true});
+
+// Load the final transition-recovery guard after the parser has loaded
+// final-stability.js. This keeps the recovery layer last in the override chain.
+setTimeout(()=>{
+  if(document.querySelector('script[data-sharp-recovery]'))return;
+  const s=document.createElement('script');
+  s.src='final-recovery.js?v=20260902r1';
+  s.dataset.sharpRecovery='1';
+  document.head.appendChild(s);
+},0);
