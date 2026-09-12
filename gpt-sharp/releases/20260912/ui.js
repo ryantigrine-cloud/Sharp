@@ -77,7 +77,7 @@ function wordsScreen() {
 }
 function upcoming() {
   if (active.practice || active.mode === 'focused' && focusedDone()) return null;
-  return active.ids[active.bi + 1] || (active.mode === 'focused' ? focusedIds()[0] : null);
+  return active.ids[active.bi + 1] || (active.mode === 'focused' ? repeatFocusedIds()[0] : null);
 }
 function blockResult() {
   const r = active.results.at(-1),

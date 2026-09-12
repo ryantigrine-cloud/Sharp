@@ -2,7 +2,7 @@ const {test,expect}=require('playwright/test');
 const app='/gpt-sharp/releases/20260912/index.html';
 async function open(page){await page.goto(app);await expect(page.getByRole('button',{name:'Start Focused Daily',exact:true})).toBeVisible();}
 async function practice(page,name){await page.getByRole('button',{name:'Games',exact:true}).click();await page.getByRole('button',{name:new RegExp('^'+name)}).click();}
-test('home selection, navigation and large text stay usable',async({page})=>{
+test('home selection and navigation stay usable',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));await open(page);await page.getByRole('heading',{name:'Make time to think.'}).dblclick();await page.getByRole('button',{name:'Performance',exact:true}).click();await expect(page.getByText('Your progress',{exact:true})).toBeVisible();await page.getByRole('button',{name:'Games',exact:true}).click();await expect(page.getByRole('button',{name:/^IQ Matrix/})).toBeVisible();expect(errors).toEqual([]);
 });
 test('numeric forms, visual selectors, pause and landscape navigation work',async({page})=>{
@@ -25,10 +25,23 @@ test('complete Full Daily timeout path, recall encoding and saved reload',async(
   while(!await page.getByRole('button',{name:'Return to Today',exact:true}).count()&&++loops<350){
     await page.clock.runFor(40);
     const next=page.locator('[data-next]');if(await next.count()){await next.click();continue;}
+    const conf=page.locator('[data-confidence]');if(await conf.count()){await conf.first().click();await page.clock.runFor(400);continue;}
+    const choice=page.locator('[data-answer]');if(await choice.count()){await choice.first().click();await page.clock.runFor(400);continue;}
     const pad=page.locator('[data-reflex-hold]');if(await pad.count()){
       const heading=await pad.getByRole('heading').textContent();
       if(heading==='PRESS AND HOLD'){await pad.focus();await page.keyboard.down('Space');await page.clock.runFor(2500);await page.keyboard.up('Space');await page.clock.runFor(500);}else await page.clock.runFor(500);
     }else await page.clock.fastForward(40000);
   }
   expect(loops).toBeLessThan(350);await expect(page.getByRole('button',{name:'Return to Today',exact:true})).toBeVisible();expect(errors).toEqual([]);await page.getByRole('button',{name:'Return to Today',exact:true}).click();await page.reload();await page.getByRole('button',{name:'Performance',exact:true}).click();await expect(page.getByText(/19 blocks/)).toBeVisible();await expect(page.getByText('current series',{exact:false}).last()).toBeVisible();
+});
+
+test('Focused Daily reaches its active-time target and keeps six priorities',async({page})=>{
+  await page.clock.install();await open(page);await page.getByRole('button',{name:'Start Focused Daily',exact:true}).click();
+  const domains=new Set();let steps=0;
+  while(!await page.getByRole('button',{name:'Return to Today',exact:true}).count()&&++steps<160){
+    await page.clock.runFor(40);
+    const next=page.locator('[data-next]');if(await next.count()){domains.add(await page.locator('h1').textContent());await next.click();continue;}
+    await page.clock.fastForward(40000);
+  }
+  expect(steps).toBeLessThan(160);expect(domains.size).toBe(6);await expect(page.getByText(/active minutes/)).toBeVisible();
 });

@@ -14,12 +14,12 @@ function clearTimers() {
 }
 function stopEngagement() {
   if (active?.engagedSince != null) {
-    active.engagedMs += Math.max(0, mono() - active.engagedSince);
+    active.engagedMs += Math.max(0, Math.min(mono(), active.deadline ?? Infinity) - active.engagedSince);
     active.engagedSince = null;
   }
 }
 function engagedMs() {
-  return active ? active.engagedMs + (active.engagedSince == null ? 0 : Math.max(0, mono() - active.engagedSince)) : 0;
+  return active ? active.engagedMs + (active.engagedSince == null ? 0 : Math.max(0, Math.min(mono(), active.deadline ?? Infinity) - active.engagedSince)) : 0;
 }
 function phase(name) {
   stopEngagement();
@@ -174,7 +174,7 @@ function resumeSession() {
   };
   if (cp.preflight) return beginPreflight();
   if (active.bi >= active.ids.length) {
-    if (active.mode === 'focused' && active.engagedMs < 600000) active.ids.push(...focusedIds());else return finishSession();
+    if (active.mode === 'focused' && active.engagedMs < 600000) active.ids.push(...repeatFocusedIds());else return finishSession();
   }
   begin();
 }
@@ -566,6 +566,9 @@ function finishBlock(o = {}) {
   checkpoint();
   render();
 }
+function repeatFocusedIds() {
+  return [...new Set(active.ids)].slice(0, 6).sort((a, b) => priority(b) - priority(a));
+}
 function focusedDone() {
   return active.mode === 'focused' && engagedMs() >= 600000;
 }
@@ -581,7 +584,7 @@ function nextBlock() {
   if (focusedDone()) return finishSession();
   active.bi++;
   if (active.bi >= active.ids.length) {
-    if (active.mode === 'focused') active.ids.push(...focusedIds());else return finishSession();
+    if (active.mode === 'focused') active.ids.push(...repeatFocusedIds());else return finishSession();
   }
   checkpoint();
   begin();
