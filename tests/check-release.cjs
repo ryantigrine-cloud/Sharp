@@ -16,9 +16,9 @@ console.log('Syntax, script order, unique definitions, storage keys and release 
 const production=path.join(source,'../../final.html');
 if(fs.existsSync(production)){
   const entry=fs.readFileSync(production,'utf8');
-  if(entry.includes('releases/20260912/')){
+  if(entry.includes('releases/20260912-2/')){
     const selected=[...entry.matchAll(/<script defer src="([^"?]+)\?v=([a-f0-9]+)"/g)];
-    assert.deepEqual(selected.map(m=>[m[1],m[2]]),scripts.map(m=>['releases/20260912/'+m[1],m[2]]));
+    assert.deepEqual(selected.map(m=>[m[1],m[2]]),scripts.map(m=>['releases/20260912-2/'+m[1],m[2]]));
     for(const m of [...entry.matchAll(/(?:src|href)="(releases\/[^"?]+)\?v=([a-f0-9]+)"/g)])assert.ok(fs.existsSync(path.resolve(path.dirname(production),m[1])),m[1]);
     console.log('Production entry selects the verified release and every local asset exists.');
   }
