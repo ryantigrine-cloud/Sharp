@@ -320,7 +320,7 @@ function loadState() {
     const checked = validateState(parsed, q);
     S = checked.state;
     QSTATE = S.quality;
-    if (raw && parsed.schemaVersion !== 2 && !errors.length && !checked.issues.length) {
+    if (raw && parsed?.schemaVersion !== 2 && !errors.length && !checked.issues.length) {
       try {
         localStorage.setItem(BACKUP_KEY, JSON.stringify({
           core: raw,
@@ -333,7 +333,7 @@ function loadState() {
         storageMessage('A backup of your existing progress could not be saved. Export it before continuing; existing progress will not be overwritten.');
       }
     }
-    if (parsed.schemaVersion > 2) {
+    if (parsed?.schemaVersion > 2) {
       persistence.blocked = true;
       storageMessage('This progress belongs to a newer SHARP version. Reload the latest app or export it before continuing.');
     }

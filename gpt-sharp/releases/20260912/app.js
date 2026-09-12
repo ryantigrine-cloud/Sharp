@@ -1,5 +1,7 @@
 'use strict';
 
+if (window.sharpBootFailed) throw new Error('A required SHARP file did not load. Reload to try again.');
+
 function usableTarget(event, selector) {
   const el = closestElement(event.target, selector);
   return el?.isConnected ? el : null;

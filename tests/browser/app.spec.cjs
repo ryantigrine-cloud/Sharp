@@ -45,3 +45,10 @@ test('Focused Daily reaches its active-time target and keeps six priorities',asy
   }
   expect(steps).toBeLessThan(160);expect(domains.size).toBe(6);await expect(page.getByText(/active minutes/)).toBeVisible();
 });
+
+test('a missing required script keeps the app in recoverable loading failure',async({page})=>{
+  await page.route('**/reflex.js?*',route=>route.abort());await page.goto(app);
+  await expect(page.getByRole('heading',{name:'SHARP could not load'})).toBeVisible();
+  await expect(page.getByRole('button',{name:'Reload SHARP'})).toBeVisible();
+  await expect(page.getByRole('button',{name:'Start Focused Daily',exact:true})).toHaveCount(0);
+});
