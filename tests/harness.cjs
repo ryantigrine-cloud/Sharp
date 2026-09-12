@@ -1,7 +1,7 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
-const source=path.join(__dirname,'../gpt-sharp/releases/20260912');
+const source=path.join(__dirname,'../gpt-sharp/releases/20260912-2');
 const files=['dictionary','data','games','quality','controller','reflex','ui','app'];
 function setup(options={}){
   let wall=Date.parse(options.date||'2026-09-12T12:00:00Z'),now=0,seq=0,seed=options.seed||42,unique=0;

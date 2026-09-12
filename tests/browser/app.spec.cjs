@@ -1,7 +1,7 @@
 const {test,expect}=require('playwright/test');
 const fs=require('node:fs'),path=require('node:path');
 const production=fs.readFileSync(path.join(__dirname,'../../gpt-sharp/final.html'),'utf8');
-const app=production.includes('releases/20260912/')?'/gpt-sharp/final.html':'/gpt-sharp/releases/20260912/index.html';
+const app=production.includes('releases/20260912-2/')?'/gpt-sharp/final.html':'/gpt-sharp/releases/20260912-2/index.html';
 async function open(page){await page.goto(app);await expect(page.getByRole('button',{name:'Start Focused Daily',exact:true})).toBeVisible();}
 async function practice(page,name){await page.getByRole('button',{name:'Games',exact:true}).click();await page.getByRole('button',{name:new RegExp('^'+name)}).click();}
 test('home selection and navigation stay usable',async({page})=>{
