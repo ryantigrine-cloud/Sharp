@@ -212,14 +212,59 @@ window.visualViewport?.addEventListener('resize', updateViewport);
 window.visualViewport?.addEventListener('scroll', updateViewport);
 window.addEventListener('resize', updateViewport);
 document.addEventListener('focusin', updateViewport);
-// Keep the native submit click and HTML validation, but prevent its pointerdown
-// from blurring the input and moving the button as Safari closes the keyboard.
+// Keep focus until activation. WebKit can suppress the compatibility click after
+// a cancelled touch pointerdown, so completed touch taps activate the real button
+// explicitly. Its click still invokes the native form validation/submit pipeline.
+let answerPress = null, answerClickGuard = null;
+function guardAnswerClick(press) {
+  answerClickGuard = { button: press.button, until: mono() + 800 };
+}
+document.addEventListener('click', event => {
+  if (!answerClickGuard || !event.isTrusted || event.detail === 0) return;
+  if (mono() > answerClickGuard.until) {
+    answerClickGuard = null;
+    return;
+  }
+  if (usableTarget(event, 'button') === answerClickGuard.button) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+  }
+}, true);
 document.addEventListener('pointerdown', event => {
-  if (event.isPrimary === false || event.button !== 0) return;
+  if (event.isPrimary === false) {
+    if (answerPress) answerPress.cancelled = true;
+    return;
+  }
+  if (event.button !== 0) return;
   const button = usableTarget(event, '.input-session button');
   if (!button || button.disabled) return;
   const input = button.closest('.input-session')?.querySelector('input');
-  if (input && document.activeElement === input) event.preventDefault();
+  if (!input || document.activeElement !== input) return;
+  event.preventDefault();
+  if (event.pointerType === 'touch' || event.pointerType === 'pen') {
+    answerPress = { button, pointerId: event.pointerId, x: event.clientX,
+      y: event.clientY, token: generation, cancelled: false };
+  }
+});
+document.addEventListener('pointermove', event => {
+  if (!answerPress || answerPress.pointerId !== event.pointerId) return;
+  if (Math.hypot(event.clientX - answerPress.x, event.clientY - answerPress.y) > 10) answerPress.cancelled = true;
+});
+document.addEventListener('pointerup', event => {
+  const press = answerPress;
+  if (!press || press.pointerId !== event.pointerId) return;
+  answerPress = null;
+  event.preventDefault();
+  guardAnswerClick(press);
+  const button = press.button, rect = button.getBoundingClientRect();
+  if (press.cancelled || press.token !== generation || !button.isConnected || button.disabled) return;
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) return;
+  button.click();
+});
+document.addEventListener('pointercancel', event => {
+  if (!answerPress || answerPress.pointerId !== event.pointerId) return;
+  guardAnswerClick(answerPress);
+  answerPress = null;
 });
 loadState();
 updateViewport();
