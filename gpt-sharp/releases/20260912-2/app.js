@@ -216,10 +216,9 @@ document.addEventListener('focusin', updateViewport);
 // from blurring the input and moving the button as Safari closes the keyboard.
 document.addEventListener('pointerdown', event => {
   if (event.isPrimary === false || event.button !== 0) return;
-  const button = usableTarget(event, '.form button');
-  const form = button?.form;
-  if (!form || button.disabled || !['answerForm', 'dualForm', 'recallForm'].includes(form.id)) return;
-  const input = form.querySelector('input');
+  const button = usableTarget(event, '.input-session button');
+  if (!button || button.disabled) return;
+  const input = button.closest('.input-session')?.querySelector('input');
   if (input && document.activeElement === input) event.preventDefault();
 });
 loadState();

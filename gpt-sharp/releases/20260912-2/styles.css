@@ -18,7 +18,7 @@ html{overflow-x:hidden}.app{padding-bottom:calc(90px + env(safe-area-inset-botto
 .input-session .form{flex-wrap:nowrap}
 .input-session .form .input{flex:1 1 0}
 .input-session .form button{flex-shrink:0;touch-action:manipulation}
-.keyboard-open .input-session{padding-top:8px;padding-bottom:10px}
+.keyboard-open .input-session{padding-top:calc(8px + env(safe-area-inset-top));padding-bottom:10px}
 .keyboard-open .input-session .sessionTools{margin:6px 0}
 .keyboard-open .input-session .qwrap{padding:8px 4px}
 .input-session~.feedback{bottom:auto;top:calc(var(--viewport-top,0px) + var(--usable-height,100dvh) - 116px);pointer-events:none}
