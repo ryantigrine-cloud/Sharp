@@ -13,3 +13,13 @@ const names=[];for(const f of files){const src=fs.readFileSync(path.join(source,
 assert.equal(new Set(names).size,names.length,'Global functions must have a single definition');
 for(const key of ['sharp-final-continuous-v1','sharp-final-quality-v1','sharp-word-dict-v2'])assert.ok(fs.readFileSync(path.join(source,'data.js'),'utf8').includes(key));
 console.log('Syntax, script order, unique definitions, storage keys and release asset hashes passed.');
+const production=path.join(source,'../../final.html');
+if(fs.existsSync(production)){
+  const entry=fs.readFileSync(production,'utf8');
+  if(entry.includes('releases/20260912/')){
+    const selected=[...entry.matchAll(/<script defer src="([^"?]+)\?v=([a-f0-9]+)"/g)];
+    assert.deepEqual(selected.map(m=>[m[1],m[2]]),scripts.map(m=>['releases/20260912/'+m[1],m[2]]));
+    for(const m of [...entry.matchAll(/(?:src|href)="(releases\/[^"?]+)\?v=([a-f0-9]+)"/g)])assert.ok(fs.existsSync(path.resolve(path.dirname(production),m[1])),m[1]);
+    console.log('Production entry selects the verified release and every local asset exists.');
+  }
+}
