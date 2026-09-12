@@ -1,0 +1,17 @@
+{
+  "build": "20260912.1",
+  "scoringVersion": 2,
+  "generatorVersion": 2,
+  "dictionary": "common-checked-20260912",
+  "assets": {
+    "app.js": "79eb89ef97646d4313cdc6263957a3b7a4a70d49c72406bed8a00a72a58e9f2c",
+    "controller.js": "ea0376ef95d41314b52b998b70e5941f84f7569875deb87b20401775b4f8d76a",
+    "data.js": "02e2a47ba031252828576f8f4b504193d199efc10030f845db523bcd997b15ff",
+    "dictionary.js": "8de208159eed5bf984e6cbf7ae251fdef5d725e1e411ba74754d3805ce320a4b",
+    "games.js": "4521d79506e78e6e4ee0b49a670c5afef7fba72b2c76211cff8fac054269b742",
+    "quality.js": "c2b037acfa72c478ca1a358dfd0fd9d016ecaa94989eff132163020022bd27e7",
+    "reflex.js": "996453689fca5cb665c7b85fbe1912e3d3013b080cbb5e319cd7ed53af33ca4b",
+    "styles.css": "317eb7835280edaf778646a57d8310028d343c7c947357c0e85a93cec085fff7",
+    "ui.js": "813af6872a51335675979619c0931d40eff1655f0ad5aed2493f5df3f4854150"
+  }
+}

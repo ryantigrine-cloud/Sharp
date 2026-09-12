@@ -1,0 +1,35 @@
+name: SHARP validation
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: sharp-validation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regression:
+    name: Content, state and browser regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run test:static
+      - run: npm test
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm run test:browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sharp-browser-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
